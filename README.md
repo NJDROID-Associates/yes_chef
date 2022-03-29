@@ -61,10 +61,16 @@ Yes Chef is an intelligent meal planning application that can ingest a link to a
 * Home Screen
     * The current signed in user is persisted across app restarts.
     * User can share recipes, meal plans, and shopping lists with other users
-* Recipes Screen
-    * User can provide the url to a recipe online and the app will extract ingredients, servings, and steps
-    * User can browse and edit their recipe library
+* Individual Post Screen
     * User can share recipes, meal plans, and shopping lists with other users
+* Create Post Screen
+    * User can share recipes, meal plans, and shopping lists with other users
+* Recipes Screen
+    * User can share recipes, meal plans, and shopping lists with other users
+* Recipe Library Screen
+    * User can browse and edit their recipe library
+* URL Extractor Screen
+    * User can provide the url to a recipe online and the app will extract ingredients, servings, and steps
 * Meal Planning Screen
     * User can create a meal plan consisting of one or more meals per day, one or more days per meal plan
     * User can create a shopping list, broken down by grocery store category, based on their meal plan
@@ -75,6 +81,8 @@ Yes Chef is an intelligent meal planning application that can ingest a link to a
     * User can share recipes, meal plans, and shopping lists with other users
 * Find Store Screen
     * User can utilize location services to find grocery stores in their area
+* My Profile Screen
+    * User can log in and log out of their account
 
   
 
