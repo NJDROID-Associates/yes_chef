@@ -90,18 +90,27 @@ Yes Chef is an intelligent meal planning application that can ingest a link to a
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Home Screen
+* Recipes Screen
+* My Profile Screen
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Splash Screen
+   * If user already logged in -> directly to home screen, else:
+   * Login button goes to login screen
+   * Register button goes to register screen
+* Home Screen
+   * Click on post recipe to go to specific post screen (detailed view of post)
+   * Create Post via floating button
+* Recipes Screen - tiles to navigate to the following screens
+   * Recipe Library Screen
+   * URL Extractor Screen
+   * Meal Planning Screen
+   * Shopping List Screen
+   * Find Store Screen
+* My Profile Screen
+   * Logout button goes back to Splash Screen
 
 ## Wireframes
 [Lo - Fi]
