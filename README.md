@@ -14,7 +14,6 @@ Original App Design Project - README
 Yes Chef is an intelligent meal planning application that can ingest a link to a recipe and generate a list of ingredients and the steps to make it, along with other helpful features for meal planning and grocery shopping.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Cooking / Meal Planning
 - **Mobile:** Mobile is needed for ease of access to use the app wherever the user wants instead of being tied to a desk. Users interact with the app to submit recipe links for processing which requires internet access. The camera is used to submit optional pictures of completed recipes.
 - **Story:** Gives users an easy way to collect and collate all their recipes onto our platform. Grants efficiencies in meal planning and helps simplify the process needed to go from wanting to make a cool recipe you found online to enjoying it at home.
