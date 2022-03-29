@@ -114,9 +114,10 @@ Yes Chef is an intelligent meal planning application that can ingest a link to a
 
 ## Wireframes
 [Lo - Fi]
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+[Yes Chef lo-fi](https://user-images.githubusercontent.com/47534734/160722694-8eb81f5d-7d71-46d0-8190-98a19b4f4d3b.png)
 
-### Hi Fi
+### Hi Fi!
+
 
 ### GIF of walkthrough
 
