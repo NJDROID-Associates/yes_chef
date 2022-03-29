@@ -20,7 +20,7 @@ Yes Chef is an intelligent meal planning application that can ingest a link to a
 - **Story:** Gives users an easy way to collect and collate all their recipes onto our platform. Grants efficiencies in meal planning and helps simplify the process needed to go from wanting to make a cool recipe you found online to enjoying it at home.
 - **Market:** Any person who cooks food at home or would like to start cooking food at home.
 - **Habit:** Users are interacting with the app when they want to cook at home or are thinking about cooking at home, multiple times a day. Users are also interacting with the app when they are planning, which can be as often as they wish to engage with the app.
-- **Scope:** V1 would allow users to create recipes and ingredient lists from submitted URLs and save them in a library for later viewing, or manually enter them. V2 would incorporate the ability to create meal plans and shopping lists from one or more saved recipes. V3 would allow for recipes to be shared amongst all users and shopping lists to be shared between specific users. V4 would incorporate a grocery store finder to find your closest grocery store to purchase your ingredients.
+- **Scope:** V1 would allow users to create recipes and ingredient lists from submitted URLs and save them in a library for later viewing, and potentially manually enter them. V2 would incorporate the ability to create meal plans and shopping lists from one or more saved recipes. V3 would allow for recipes to be shared amongst all users and shopping lists to be shared between specific users. V4 would incorporate a grocery store finder to find your closest grocery store to purchase your ingredients.
 
 ## Product Spec
 
@@ -52,12 +52,32 @@ Yes Chef is an intelligent meal planning application that can ingest a link to a
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Splash Screen
+    * User can sign up to create a new account using Parse Authentication
+    * User can log in and log out of their account
+* Register Screen
+    * User can sign up to create a new account using Parse Authentication
+* Login Screen
+    * User can log in and log out of their account
+* Home Screen
+    * The current signed in user is persisted across app restarts.
+    * User can share recipes, meal plans, and shopping lists with other users
+* Recipes Screen
+    * User can provide the url to a recipe online and the app will extract ingredients, servings, and steps
+    * User can browse and edit their recipe library
+    * User can share recipes, meal plans, and shopping lists with other users
+* Meal Planning Screen
+    * User can create a meal plan consisting of one or more meals per day, one or more days per meal plan
+    * User can create a shopping list, broken down by grocery store category, based on their meal plan
+    * User can share recipes, meal plans, and shopping lists with other users
+* Shopping List Screen
+    * User can create a shopping list, broken down by grocery store category, based on their meal plan
+    * Shopping lists are built as checklists to allow for tracking shopping progress
+    * User can share recipes, meal plans, and shopping lists with other users
+* Find Store Screen
+    * User can utilize location services to find grocery stores in their area
+
+  
 
 ### 3. Navigation
 
