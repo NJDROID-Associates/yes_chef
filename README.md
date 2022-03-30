@@ -115,8 +115,9 @@ Yes Chef is an intelligent meal planning application that can ingest a link to a
 ## Wireframes
 ### [Lo - Fi]
 <img src ="https://user-images.githubusercontent.com/47534734/160722694-8eb81f5d-7d71-46d0-8190-98a19b4f4d3b.png">
-
+<img src = "https://user-images.githubusercontent.com/74472745/160739286-5ee81edc-1429-4f49-a775-6ae3d4b14388.jpg">
 ### Hi Fi!
+
 
 
 ### GIF of walkthrough
