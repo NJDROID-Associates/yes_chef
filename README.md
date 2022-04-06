@@ -376,6 +376,5 @@ Shopping List
    - (Update/PUT) Update user object
    - (Read/GET) Query users post objects
 
-- [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
 
