@@ -199,23 +199,155 @@ Shopping List
    - N/A
 - Register Screen
    - (Create/POST) Create a new user account
+   ```
+   ParseUser newUser =  new ParseUser();
+   newUser.put("display_name",display_name);
+   newUser.put("username", username);
+   newUser.put("password", password);
+   //Profile pic, About, fname, lname could be in other screens such as profile settings or app tutorial if we get one,
+   newUser.signUpInBackground(e -> {
+       if(e!=null){
+           Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+       }else{
+           Toast.makeText(this, "Account was created!\nYou can now log in!", Toast.LENGTH_LONG).show();
+       }
+   });
+   ```
 - Login Screen
    - (Read/POST) Login to user account
+   ```
+   ParseUser.logInInBackground(username, password, new LogInCallback(){
+    @Override
+    public void done(ParseUser user, ParseException e) {
+        if (e!=null){
+            Log.e(TAG, "Issue with login", e);
+            return;
+        }
+        goMainActivity();
+    }
+   });
 - Home Screen
    - (Read/GET) Query logged in user object
    - (Create/POST) Create a new like on a post
+   ```
+   ParseQuery<ParseObject> query = ParseQuery.getQuery("Post");
+   query.getInBackground(postID, (post, e) -> {
+   if (e == null) {
+       //Object was successfully retrieved
+       // Update the fields we want to
+       post.setLikes(post.getLikes()+1); 
+       post.setUsersLikedArray(post.getUsersLikedArray().add(currentUser)); 
+   } else {
+       Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+   }
+   });
+   ```
    - (Delete) Delete existing like
+   ```
+   ParseQuery<ParseObject> query = ParseQuery.getQuery("Post");
+   query.getInBackground(postID, (post, e) -> {
+   if (e == null) {
+       //Object was successfully retrieved
+       // Update the fields we want to
+       post.setLikes(post.getLikes()-1); 
+       post.setUsersLikedArray(post.getUsersLikedArray().remove(currentUser)); 
+   }else {
+       Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+   }
+   });
+   ```
    - (Create/POST) Create a new comment on a post (stretch)
+   ```
+   ParseQuery<ParseObject> query = ParseQuery.getQuery("Post");
+   query.getInBackground(postID, (post, e) -> {
+   if (e == null) {
+       //Object was successfully retrieved
+       // Update the fields we want to
+       post.addUserComment(userCommentObj); //Adds comment to the array in the Post Object
+   } else {
+       Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+   }
+   });
+   ```
    - (Delete) Delete existing comment (stretch)
+   ```
+   ParseQuery<ParseObject> query = ParseQuery.getQuery("Post");
+   query.getInBackground(postID, (post, e) -> {
+   if (e == null) {
+       //Object was successfully retrieved
+       // Update the fields we want to
+       post.deleteUserComment(userCommentObj); \\Uses id in the User object to get rid of comment in the User Comment Array
+   } else {
+       Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+   }
+   });
+   ```
    - (Edit/PUT) edit comment on a post (stretch)
+   ```
+   ParseQuery<ParseObject> query = ParseQuery.getQuery("Post");
+   query.getInBackground(postID, (post, e) -> {
+   if (e == null) {
+       //Object was successfully retrieved
+       // Update the fields we want to
+       post.updateUserComment(userCommentObj); \\Uses id in the User object to update of comment in the User Comment Array
+   } else {
+       Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+   }
+   });
+   ```
 - Individual Post Screen
    - (Create/POST) Create a new like on a post
+   ```
+   ParseQuery<ParseObject> query = ParseQuery.getQuery("Post");
+   query.getInBackground(postID, (post, e) -> {
+   if (e == null) {
+       //Object was successfully retrieved
+       // Update the fields we want to
+       post.setLikes(post.getLikes()+1); 
+       post.setUsersLikedArray(post.getUsersLikedArray().add(currentUser)); 
+   } else {
+       Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+   }
+   });
+   ```
    - (Delete) Delete existing like
+   ```
+   ParseQuery<ParseObject> query = ParseQuery.getQuery("Post");
+   query.getInBackground(postID, (post, e) -> {
+   if (e == null) {
+       //Object was successfully retrieved
+       // Update the fields we want to
+       post.setLikes(post.getLikes()+1); 
+       post.setUsersLikedArray(post.getUsersLikedArray().add(currentUser)); 
+   } else {
+       Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+   }
+   });
+   ```
    - (Create/POST) Create a new comment on a post (stretch)
    - (Delete) Delete existing comment (stretch)
    - (Edit/PUT) edit comment on a post (stretch)
 - Create Post Screen
    - (Create/POST) Create a new post object
+   ```
+   Post post = new Post();
+   post.setRecipe(recipe);
+   post.setDescription(description);
+   post.setImage(new ParseFile(photoFile)); //Recommended but optional
+   post.setUser(currentUser);
+
+   post.saveInBackground(new SaveCallback() {
+       @Override
+       public void done(ParseException e) {
+           if(e!=null){
+               Log.e(TAG, "Error while saving", e);
+               Toast.makeText(getContext(), "Error while saving!", Toast.LENGTH_SHORT).show();
+           }
+           Log.i(TAG, "POST save was successful!");
+           Toast.makeText(getContext(), "Posted!", Toast.LENGTH_SHORT).show();
+       }
+   });
+   ```
 - Recipes Screen
    - N/A
 - Recipe Library Screen
