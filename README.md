@@ -30,7 +30,7 @@ Yes Chef is an intelligent meal planning application that can ingest a link to a
 - [ ] User can sign up to create a new account using Parse authentication
 - [ ] User can log in and log out of their account.
 - [ ] The current signed in user is persisted across app restarts.
-- [ ] User can provide the url to a recipe online and the app will extract ingredients, servings, and steps
+- [x] User can provide the url to a recipe online and the app will extract ingredients, servings, and steps
 - [ ] User can browse and edit their recipe library
 - [ ] User can create a meal plan consisting of one or more meals per day, one or more days per meal plan
 - [ ] User can create a shopping list, broken down by grocery store category, based on their meal plan
