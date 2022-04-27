@@ -38,4 +38,5 @@ dependencies {
 
     //Project Libraries
     implementation 'com.codepath.libraries:asynchttpclient:2.2.0'
+    implementation "com.github.parse-community.Parse-SDK-Android:parse:1.25.0"
 }

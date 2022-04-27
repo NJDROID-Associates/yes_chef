@@ -1,16 +1,20 @@
 package com.example.yeschef;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import com.codepath.asynchttpclient.AsyncHttpClient;
 import com.codepath.asynchttpclient.callback.JsonHttpResponseHandler;
+import com.parse.ParseUser;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -19,7 +23,7 @@ import okhttp3.Headers;
 
 public class MainActivity extends AppCompatActivity {
     public static final String TAG = "MainActivity";
-    public static final String API_URL = "http://20.232.181.109:8080/?url=";
+    public static final String API_URL = "http://20.232.126.71:8080/?url=";
     private EditText etURL;
     private Button  buttonExtractRecipe;
     private String givenURL;
@@ -64,7 +68,20 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    private void addRecipeToLibrary(JSONArray recipe) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if(item.getItemId() == R.id.signOut){
+            Intent i = new Intent(this, LoginActivity.class);
+            startActivity(i);
+            ParseUser.logOutInBackground();
+            finish();
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
