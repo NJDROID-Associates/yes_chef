@@ -4,7 +4,8 @@ Original App Design Project - README
 # Yes, Chef!
 
 ## App GIF
-<img src=''
+<img src='https://user-images.githubusercontent.com/74472745/165435161-c099bb96-fdbd-4428-8e05-e3aeda9a0f79.gif' title="Vide Walkthrough" width='' alt="Video Walkthrough"/>
+
 ## Table of Contents
 1. [Overview](#Overview)
 1. [Product Spec](#Product-Spec)
@@ -12,7 +13,8 @@ Original App Design Project - README
 2. [Schema](#Schema)
 
 ## Overview
-### Description
+### Description!
+
 Yes Chef is an intelligent meal planning application that can ingest a link to a recipe and generate a list of ingredients and the steps to make it, along with other helpful features for meal planning and grocery shopping.
 
 ### App Evaluation
