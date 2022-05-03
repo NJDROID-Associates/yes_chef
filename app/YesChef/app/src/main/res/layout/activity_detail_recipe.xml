@@ -1,9 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DetailRecipeActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvDetailRecipeName"
+        android:layout_width="376dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="20dp"
+        android:textSize="30sp"
+        tools:text="Recipe name"/>
+    <TextView
+        android:id="@+id/tvIngredientTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDetailRecipeName"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:textSize="20sp"
+        android:text="Ingredients:" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDetailIngredients"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:layout_below="@+id/tvIngredientTitle2"
+        android:layout_marginTop="5dp" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:background="@color/purple_500"
+        android:layout_below="@+id/rvDetailIngredients"/>
+
+    <TextView
+        android:id="@+id/tvInstructionTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:text="Instructions:"
+        android:textSize="20sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvDetailInstructions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tvInstructionTitle2"
+        android:layout_marginTop="5dp" />
+
+
+
+</RelativeLayout>

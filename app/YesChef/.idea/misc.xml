@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/School/CurrentCourses/CS388/yes_chef/app/YesChef/app/src/main/res/layout/activity_detail_recipe.xml" value="0.24270833333333333" />
+        <entry key="..\:/School/CurrentCourses/CS388/yes_chef/app/YesChef/app/src/main/res/layout/activity_main.xml" value="0.18541666666666667" />
+        <entry key="..\:/School/CurrentCourses/CS388/yes_chef/app/YesChef/app/src/main/res/layout/activity_my_recipe_library.xml" value="0.18541666666666667" />
+        <entry key="..\:/School/CurrentCourses/CS388/yes_chef/app/YesChef/app/src/main/res/layout/activity_view_extracted_recipe.xml" value="0.24270833333333333" />
+        <entry key="..\:/School/CurrentCourses/CS388/yes_chef/app/YesChef/app/src/main/res/layout/ingredient_item.xml" value="0.18541666666666667" />
+        <entry key="..\:/School/CurrentCourses/CS388/yes_chef/app/YesChef/app/src/main/res/layout/instruction_item.xml" value="0.18541666666666667" />
+        <entry key="..\:/School/CurrentCourses/CS388/yes_chef/app/YesChef/app/src/main/res/layout/recipe_item.xml" value="0.24270833333333333" />
         <entry key="..\:/Users/w3ird/AndroidStudioProjects/YesChef/app/src/main/res/layout/activity_login.xml" value="0.3578125" />
         <entry key="..\:/Users/w3ird/AndroidStudioProjects/YesChef/app/src/main/res/layout/activity_main.xml" value="0.358695652173913" />
         <entry key="..\:/Users/w3ird/AndroidStudioProjects/YesChef/app/src/main/res/layout/activity_sign_up.xml" value="0.3578125" />

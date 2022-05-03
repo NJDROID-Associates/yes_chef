@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText etURL;
     private Button  buttonExtractRecipe;
     private String givenURL;
+    private Button btnMyLibrary;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,13 @@ public class MainActivity extends AppCompatActivity {
         AsyncHttpClient client = new AsyncHttpClient();
 
         etURL = findViewById(R.id.etURL);
+        btnMyLibrary = findViewById(R.id.btnMyLibrary);
+        btnMyLibrary.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goMyLibraryActivity();
+            }
+        });
         buttonExtractRecipe = findViewById(R.id.buttonExtractRecipe);
 
         buttonExtractRecipe.setOnClickListener(new View.OnClickListener() {
@@ -47,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
                     client.get(API_URL + givenURL, new JsonHttpResponseHandler() {
                         @Override
                         public void onSuccess(int statusCode, Headers headers, JSON json) {
-                            JSONArray recipe = json.jsonArray;
+                            JSONObject recipe = json.jsonObject;
                             goExtractedRecipeActivity(recipe);
                         }
 
@@ -61,10 +69,15 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void goExtractedRecipeActivity(JSONArray recipe){
+    private void goExtractedRecipeActivity(JSONObject recipe){
         Log.i(TAG, recipe.toString());
         Intent i = new Intent(this, ExtractedRecipeActivity.class);
         i.putExtra("json", recipe.toString());
+        startActivity(i);
+    }
+
+    private void goMyLibraryActivity(){
+        Intent i = new Intent(this, MyLibraryActivity.class);
         startActivity(i);
     }
 

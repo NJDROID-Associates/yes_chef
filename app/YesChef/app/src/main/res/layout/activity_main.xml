@@ -30,4 +30,24 @@
         android:layout_marginTop="10dp"
         android:text="Extract Recipe" />
 
+    <View
+        android:id="@+id/divLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:layout_below="@id/buttonExtractRecipe"
+        android:layout_marginTop="10dp"
+        android:background="@color/purple_500"/>
+
+    <Button
+        android:id="@+id/btnMyLibrary"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_below="@id/divLine1"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:text="My Library"
+        android:textSize="25sp" />
+
+
 </RelativeLayout>

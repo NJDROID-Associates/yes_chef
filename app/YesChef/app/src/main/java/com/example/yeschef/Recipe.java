@@ -5,6 +5,8 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 @ParseClassName("Recipe")
 public class Recipe extends ParseObject {
@@ -28,11 +30,11 @@ public class Recipe extends ParseObject {
         put(KEY_CREATED_BY, user);
     }
 
-    public JSONArray getRecipeJSON(){
-        return getJSONArray(KEY_RECIPE_JSON);
+    public JSONObject getRecipeJSON(){
+        return getJSONObject(KEY_RECIPE_JSON);
     }
 
-    public void setRecipeJSON(JSONArray json){
+    public void setRecipeJSON(JSONObject json){
         put(KEY_RECIPE_JSON, json);
     }
 }
